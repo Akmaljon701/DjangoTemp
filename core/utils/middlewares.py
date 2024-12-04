@@ -1,10 +1,14 @@
+import os
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 import traceback
 import requests
 import socket
+from dotenv import load_dotenv
 
-BOT_TOKEN = '6825018776:AAEyD3vf7kQQSx2gsPvPRnqNsWvyk-u7VFQ'
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 USER_ID = 1592471406
 TARGET_SERVER_HOSTNAME = ['vps02306.eskiz.uz']
 
